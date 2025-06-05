@@ -1,0 +1,11 @@
+{
+  "model_type": "Fire Spread Prediction LSTM",
+  "architecture": "2 LSTM layers, 64 hidden units",
+  "sequence_length": 7,
+  "input_features": 4,
+  "epochs_trained": 50,
+  "best_model_path": "models\\saved_models\\best_fire_prediction_model.pth",
+  "test_mae": 0.145,
+  "test_rmse": 0.267,
+  "test_r2_score": 0.834
+} 

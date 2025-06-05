@@ -1,0 +1,594 @@
+[
+  {
+    "id": 46,
+    "timestamp": "2025-06-05T21:49:22.690646",
+    "location": "Satellite Image Detection",
+    "risk_level": "High",
+    "type": "Fire Detection",
+    "details": "Fire detected with 0.89 confidence in uploaded image",
+    "coordinates": null,
+    "status": "active"
+  },
+  {
+    "id": 45,
+    "timestamp": "2025-06-05T21:49:11.615972",
+    "location": "Madhya Pradesh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 37.9\u00b0C, 47.5% humidity",
+    "coordinates": [
+      22.9734,
+      78.6569
+    ],
+    "status": "active"
+  },
+  {
+    "id": 44,
+    "timestamp": "2025-06-05T21:49:11.602345",
+    "location": "Telangana",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 38.3\u00b0C, 33.9% humidity",
+    "coordinates": [
+      18.1124,
+      79.0193
+    ],
+    "status": "active"
+  },
+  {
+    "id": 43,
+    "timestamp": "2025-06-05T21:49:11.588030",
+    "location": "Karnataka",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 37.6\u00b0C, 47.9% humidity",
+    "coordinates": [
+      15.3173,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 42,
+    "timestamp": "2025-06-05T21:49:11.573882",
+    "location": "Maharashtra",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 45.0\u00b0C, 42.6% humidity",
+    "coordinates": [
+      19.7515,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 41,
+    "timestamp": "2025-06-05T21:49:11.020103",
+    "location": "West Bengal",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 38.1\u00b0C, 25.0% humidity",
+    "coordinates": [
+      22.9868,
+      87.855
+    ],
+    "status": "active"
+  },
+  {
+    "id": 40,
+    "timestamp": "2025-06-05T21:49:11.005437",
+    "location": "Maharashtra",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 36.8\u00b0C, 40.0% humidity",
+    "coordinates": [
+      19.7515,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 39,
+    "timestamp": "2025-06-05T21:49:09.923743",
+    "location": "West Bengal",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 27.8\u00b0C, 31.5% humidity",
+    "coordinates": [
+      22.9868,
+      87.855
+    ],
+    "status": "active"
+  },
+  {
+    "id": 38,
+    "timestamp": "2025-06-05T21:49:09.909117",
+    "location": "Telangana",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 43.2\u00b0C, 47.2% humidity",
+    "coordinates": [
+      18.1124,
+      79.0193
+    ],
+    "status": "active"
+  },
+  {
+    "id": 37,
+    "timestamp": "2025-06-05T21:49:09.889325",
+    "location": "Karnataka",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 31.4\u00b0C, 28.0% humidity",
+    "coordinates": [
+      15.3173,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 36,
+    "timestamp": "2025-06-05T21:49:03.351551",
+    "location": "West Bengal",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 44.9\u00b0C, 54.2% humidity",
+    "coordinates": [
+      22.9868,
+      87.855
+    ],
+    "status": "active"
+  },
+  {
+    "id": 35,
+    "timestamp": "2025-06-05T21:49:03.327349",
+    "location": "Telangana",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 38.8\u00b0C, 22.4% humidity",
+    "coordinates": [
+      18.1124,
+      79.0193
+    ],
+    "status": "active"
+  },
+  {
+    "id": 34,
+    "timestamp": "2025-06-05T21:49:03.305891",
+    "location": "Odisha",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 41.1\u00b0C, 28.0% humidity",
+    "coordinates": [
+      20.9517,
+      85.0985
+    ],
+    "status": "active"
+  },
+  {
+    "id": 33,
+    "timestamp": "2025-06-05T21:41:42.770265",
+    "location": "Madhya Pradesh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 34.7\u00b0C, 50.5% humidity",
+    "coordinates": [
+      22.9734,
+      78.6569
+    ],
+    "status": "active"
+  },
+  {
+    "id": 32,
+    "timestamp": "2025-06-05T21:41:42.753208",
+    "location": "Maharashtra",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 38.2\u00b0C, 48.4% humidity",
+    "coordinates": [
+      19.7515,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 31,
+    "timestamp": "2025-06-05T21:41:42.404496",
+    "location": "West Bengal",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 43.9\u00b0C, 60.0% humidity",
+    "coordinates": [
+      22.9868,
+      87.855
+    ],
+    "status": "active"
+  },
+  {
+    "id": 30,
+    "timestamp": "2025-06-05T21:41:42.390234",
+    "location": "Jharkhand",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 30.4\u00b0C, 31.1% humidity",
+    "coordinates": [
+      23.6102,
+      85.2799
+    ],
+    "status": "active"
+  },
+  {
+    "id": 29,
+    "timestamp": "2025-06-05T21:41:40.278437",
+    "location": "Jharkhand",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 28.1\u00b0C, 36.2% humidity",
+    "coordinates": [
+      23.6102,
+      85.2799
+    ],
+    "status": "active"
+  },
+  {
+    "id": 28,
+    "timestamp": "2025-06-05T21:41:40.264888",
+    "location": "Telangana",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 43.0\u00b0C, 50.4% humidity",
+    "coordinates": [
+      18.1124,
+      79.0193
+    ],
+    "status": "active"
+  },
+  {
+    "id": 27,
+    "timestamp": "2025-06-05T21:41:40.250614",
+    "location": "Chhattisgarh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 39.8\u00b0C, 23.7% humidity",
+    "coordinates": [
+      21.2787,
+      81.8661
+    ],
+    "status": "active"
+  },
+  {
+    "id": 26,
+    "timestamp": "2025-06-05T21:41:39.857357",
+    "location": "West Bengal",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 43.9\u00b0C, 45.9% humidity",
+    "coordinates": [
+      22.9868,
+      87.855
+    ],
+    "status": "active"
+  },
+  {
+    "id": 25,
+    "timestamp": "2025-06-05T21:41:39.836513",
+    "location": "Telangana",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 43.4\u00b0C, 32.9% humidity",
+    "coordinates": [
+      18.1124,
+      79.0193
+    ],
+    "status": "active"
+  },
+  {
+    "id": 24,
+    "timestamp": "2025-06-05T21:41:39.819454",
+    "location": "Karnataka",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 33.0\u00b0C, 26.9% humidity",
+    "coordinates": [
+      15.3173,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 23,
+    "timestamp": "2025-06-05T21:41:39.801339",
+    "location": "Maharashtra",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 32.2\u00b0C, 24.8% humidity",
+    "coordinates": [
+      19.7515,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 22,
+    "timestamp": "2025-06-05T21:41:39.768783",
+    "location": "Chhattisgarh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 37.6\u00b0C, 44.2% humidity",
+    "coordinates": [
+      21.2787,
+      81.8661
+    ],
+    "status": "active"
+  },
+  {
+    "id": 21,
+    "timestamp": "2025-06-05T21:40:40.125215",
+    "location": "Madhya Pradesh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 36.3\u00b0C, 32.8% humidity",
+    "coordinates": [
+      22.9734,
+      78.6569
+    ],
+    "status": "active"
+  },
+  {
+    "id": 20,
+    "timestamp": "2025-06-05T21:40:40.110432",
+    "location": "Odisha",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 36.8\u00b0C, 26.5% humidity",
+    "coordinates": [
+      20.9517,
+      85.0985
+    ],
+    "status": "active"
+  },
+  {
+    "id": 19,
+    "timestamp": "2025-06-05T21:39:52.291992",
+    "location": "Telangana",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 43.5\u00b0C, 44.2% humidity",
+    "coordinates": [
+      18.1124,
+      79.0193
+    ],
+    "status": "active"
+  },
+  {
+    "id": 18,
+    "timestamp": "2025-06-05T21:39:52.277303",
+    "location": "Karnataka",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 32.5\u00b0C, 29.9% humidity",
+    "coordinates": [
+      15.3173,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 17,
+    "timestamp": "2025-06-05T21:39:52.263650",
+    "location": "Maharashtra",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 43.2\u00b0C, 53.3% humidity",
+    "coordinates": [
+      19.7515,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 16,
+    "timestamp": "2025-06-05T21:39:52.252767",
+    "location": "Chhattisgarh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 44.6\u00b0C, 47.8% humidity",
+    "coordinates": [
+      21.2787,
+      81.8661
+    ],
+    "status": "active"
+  },
+  {
+    "id": 15,
+    "timestamp": "2025-06-05T21:39:51.646455",
+    "location": "Madhya Pradesh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 25.7\u00b0C, 25.9% humidity",
+    "coordinates": [
+      22.9734,
+      78.6569
+    ],
+    "status": "active"
+  },
+  {
+    "id": 14,
+    "timestamp": "2025-06-05T21:39:51.632652",
+    "location": "Jharkhand",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 39.0\u00b0C, 27.4% humidity",
+    "coordinates": [
+      23.6102,
+      85.2799
+    ],
+    "status": "active"
+  },
+  {
+    "id": 13,
+    "timestamp": "2025-06-05T21:39:51.620051",
+    "location": "Karnataka",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 34.5\u00b0C, 21.2% humidity",
+    "coordinates": [
+      15.3173,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 12,
+    "timestamp": "2025-06-05T21:39:51.606956",
+    "location": "Chhattisgarh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 41.9\u00b0C, 58.4% humidity",
+    "coordinates": [
+      21.2787,
+      81.8661
+    ],
+    "status": "active"
+  },
+  {
+    "id": 11,
+    "timestamp": "2025-06-05T21:39:47.435139",
+    "location": "Karnataka",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 26.4\u00b0C, 33.6% humidity",
+    "coordinates": [
+      15.3173,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 10,
+    "timestamp": "2025-06-05T21:39:47.422232",
+    "location": "Maharashtra",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 37.1\u00b0C, 36.9% humidity",
+    "coordinates": [
+      19.7515,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 9,
+    "timestamp": "2025-06-05T21:39:46.532125",
+    "location": "West Bengal",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 35.9\u00b0C, 45.2% humidity",
+    "coordinates": [
+      22.9868,
+      87.855
+    ],
+    "status": "active"
+  },
+  {
+    "id": 8,
+    "timestamp": "2025-06-05T21:39:46.520886",
+    "location": "Karnataka",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 39.2\u00b0C, 52.8% humidity",
+    "coordinates": [
+      15.3173,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 7,
+    "timestamp": "2025-06-05T21:39:46.508890",
+    "location": "Maharashtra",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 32.2\u00b0C, 34.0% humidity",
+    "coordinates": [
+      19.7515,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 6,
+    "timestamp": "2025-06-05T21:39:42.279605",
+    "location": "Telangana",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 28.5\u00b0C, 26.8% humidity",
+    "coordinates": [
+      18.1124,
+      79.0193
+    ],
+    "status": "active"
+  },
+  {
+    "id": 5,
+    "timestamp": "2025-06-05T21:39:42.258265",
+    "location": "Maharashtra",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 37.4\u00b0C, 34.8% humidity",
+    "coordinates": [
+      19.7515,
+      75.7139
+    ],
+    "status": "active"
+  },
+  {
+    "id": 4,
+    "timestamp": "2025-06-05T21:36:10.651853",
+    "location": "Satellite Image Detection",
+    "risk_level": "High",
+    "type": "Fire Detection",
+    "details": "Fire detected with 0.89 confidence in uploaded image",
+    "coordinates": null,
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "timestamp": "2025-06-05T21:35:32.712914",
+    "location": "Jharkhand",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 41.8\u00b0C, 36.7% humidity",
+    "coordinates": [
+      23.6102,
+      85.2799
+    ],
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "timestamp": "2025-06-05T21:35:32.699876",
+    "location": "Chhattisgarh",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 37.0\u00b0C, 41.0% humidity",
+    "coordinates": [
+      21.2787,
+      81.8661
+    ],
+    "status": "active"
+  },
+  {
+    "id": 1,
+    "timestamp": "2025-06-05T21:35:32.675328",
+    "location": "Odisha",
+    "risk_level": "High",
+    "type": "Weather Alert",
+    "details": "High fire risk weather: 31.4\u00b0C, 22.6% humidity",
+    "coordinates": [
+      20.9517,
+      85.0985
+    ],
+    "status": "active"
+  }
+]

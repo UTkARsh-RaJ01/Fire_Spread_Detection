@@ -1,0 +1,42 @@
+{
+  "Odisha": {
+    "lat": 20.9517,
+    "lon": 85.0985,
+    "fire_frequency": "High"
+  },
+  "Chhattisgarh": {
+    "lat": 21.2787,
+    "lon": 81.8661,
+    "fire_frequency": "High"
+  },
+  "Maharashtra": {
+    "lat": 19.7515,
+    "lon": 75.7139,
+    "fire_frequency": "Medium"
+  },
+  "Telangana": {
+    "lat": 18.1124,
+    "lon": 79.0193,
+    "fire_frequency": "Medium"
+  },
+  "Jharkhand": {
+    "lat": 23.6102,
+    "lon": 85.2799,
+    "fire_frequency": "High"
+  },
+  "West Bengal": {
+    "lat": 22.9868,
+    "lon": 87.855,
+    "fire_frequency": "Medium"
+  },
+  "Andhra Pradesh": {
+    "lat": 15.9129,
+    "lon": 79.74,
+    "fire_frequency": "Low"
+  },
+  "Assam": {
+    "lat": 26.2006,
+    "lon": 92.9376,
+    "fire_frequency": "Medium"
+  }
+}

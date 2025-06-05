@@ -1,0 +1,10 @@
+{
+  "model_type": "Fire Detection CNN",
+  "architecture": "ResNet18-based",
+  "epochs_trained": 25,
+  "best_model_path": "models\\saved_models\\best_fire_detection_model.pth",
+  "test_accuracy": 1.0,
+  "test_f1_score": 1.0,
+  "test_precision": 1.0,
+  "test_recall": 1.0
+}

@@ -141,10 +141,8 @@ cython_debug/
 # VS Code
 .vscode/
 
-# Model files (too large for GitHub)
-*.pth
+# Model files (now handled by Git LFS)
 *.h5
-*.pkl
 *.model
 
 # Data files

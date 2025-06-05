@@ -10,6 +10,7 @@ seaborn>=0.13.2
 # Image Processing
 opencv-python-headless>=4.5.0
 Pillow>=8.0.0
+albumentations>=1.3.0
 
 # Data Handling
 requests>=2.25.0

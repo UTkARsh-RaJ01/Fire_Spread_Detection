@@ -10,8 +10,7 @@ import torch
 from PIL import Image
 import plotly.express as px
 import plotly.graph_objects as go
-import folium
-from streamlit_folium import st_folium
+
 import json
 from pathlib import Path
 import sys
@@ -98,37 +97,7 @@ def load_models():
     
     return models
 
-def create_india_map(coordinates_data, fire_detections=None, tiles='OpenStreetMap'):
-    """Create an interactive map of India with fire data"""
-    # Center map on India
-    india_center = [20.5937, 78.9629]
-    m = folium.Map(location=india_center, zoom_start=5, tiles=tiles)
-    
-    # Add fire-prone areas
-    for state, info in coordinates_data.items():
-        color = {'High': 'red', 'Medium': 'orange', 'Low': 'green'}.get(info['fire_frequency'], 'blue')
-        
-        folium.Marker(
-            location=[info['lat'], info['lon']],
-            popup=f"{state}<br>Fire Frequency: {info['fire_frequency']}",
-            tooltip=state,
-            icon=folium.Icon(color=color, icon='fire', prefix='fa')
-        ).add_to(m)
-    
-    # Add fire detections if provided
-    if fire_detections:
-        for detection in fire_detections:
-            folium.CircleMarker(
-                location=[detection['lat'], detection['lon']],
-                radius=10,
-                popup=f"Fire detected!<br>Confidence: {detection['confidence']:.2f}",
-                color='red',
-                fill=True,
-                fillColor='red',
-                fillOpacity=0.7
-            ).add_to(m)
-    
-    return m
+
 
 def main():
     # Header
@@ -188,33 +157,27 @@ def show_dashboard(coordinates_data, models):
     with col1:
         st.subheader("🗺️ Fire Risk Map - India")
         
-        # Quick map style toggle for dashboard
-        dashboard_map_style = st.radio("Map View:", ["Standard", "Satellite"], horizontal=True)
-        tiles = 'OpenStreetMap' if dashboard_map_style == "Standard" else "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+        # Create simple dataframe for native map
+        import pandas as pd
+        map_data = []
+        for state, info in coordinates_data.items():
+            map_data.append({
+                'latitude': info['lat'],
+                'longitude': info['lon'],
+                'state': state,
+                'risk': info['fire_frequency']
+            })
         
-        if dashboard_map_style == "Satellite":
-            # Create satellite map for dashboard
-            india_center = [20.5937, 78.9629]
-            map_obj = folium.Map(location=india_center, zoom_start=5)
-            folium.TileLayer(
-                tiles=tiles,
-                attr="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
-                name="Satellite"
-            ).add_to(map_obj)
-            
-            # Add fire-prone areas
-            for state, info in coordinates_data.items():
-                color = {'High': 'red', 'Medium': 'orange', 'Low': 'green'}.get(info['fire_frequency'], 'blue')
-                folium.Marker(
-                    location=[info['lat'], info['lon']],
-                    popup=f"{state}<br>Fire Frequency: {info['fire_frequency']}",
-                    tooltip=state,
-                    icon=folium.Icon(color=color, icon='fire', prefix='fa')
-                ).add_to(map_obj)
-        else:
-            map_obj = create_india_map(coordinates_data)
-            
-        st_folium(map_obj, width=700, height=400)
+        df = pd.DataFrame(map_data)
+        
+        # Display native Streamlit map
+        st.map(df, latitude='latitude', longitude='longitude', size=20, color='#ff0000')
+        
+        # Show details below map
+        st.markdown("**Fire Risk Areas:**")
+        for state, info in coordinates_data.items():
+            risk_color = "🔴" if info['fire_frequency'] == 'High' else "🟡" if info['fire_frequency'] == 'Medium' else "🟢"
+            st.markdown(f"{risk_color} **{state}** - {info['fire_frequency']} Risk")
     
     with col2:
         st.subheader("🚨 Recent Alerts")
@@ -242,7 +205,7 @@ def show_dashboard(coordinates_data, models):
             
         # Add refresh button
         if st.button("🔄 Refresh Alerts"):
-            st.rerun()
+            st.experimental_rerun()
 
 def show_fire_detection(models):
     """Fire detection interface"""
@@ -484,21 +447,11 @@ def show_fire_map(coordinates_data):
     st.header("🗺️ Interactive Fire Monitoring Map")
     
     # Map controls
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     with col1:
         show_risk_areas = st.checkbox("Show Risk Areas", value=True)
     with col2:
         show_detections = st.checkbox("Show Fire Detections", value=True)
-    with col3:
-        map_style = st.selectbox("Map Style", ["OpenStreetMap", "Satellite"])
-    
-    # Create map with proper satellite tile options
-    if map_style == "Satellite":
-        tiles = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-        attr = "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
-    else:
-        tiles = 'OpenStreetMap'
-        attr = None
     
     # Simulate some fire detections
     fire_detections = [
@@ -507,68 +460,44 @@ def show_fire_map(coordinates_data):
         {"lat": 19.5, "lon": 75.5, "confidence": 0.76}
     ] if show_detections else None
     
-    if show_risk_areas:
-        if map_style == "Satellite":
-            # Create custom satellite map
-            india_center = [20.5937, 78.9629]
-            map_obj = folium.Map(location=india_center, zoom_start=5)
-            folium.TileLayer(
-                tiles=tiles,
-                attr=attr,
-                name="Satellite"
-            ).add_to(map_obj)
-            
-            # Add fire-prone areas
-            for state, info in coordinates_data.items():
-                color = {'High': 'red', 'Medium': 'orange', 'Low': 'green'}.get(info['fire_frequency'], 'blue')
-                
-                folium.Marker(
-                    location=[info['lat'], info['lon']],
-                    popup=f"{state}<br>Fire Frequency: {info['fire_frequency']}",
-                    tooltip=state,
-                    icon=folium.Icon(color=color, icon='fire', prefix='fa')
-                ).add_to(map_obj)
-            
-            # Add fire detections if provided
-            if fire_detections:
-                for detection in fire_detections:
-                    folium.CircleMarker(
-                        location=[detection['lat'], detection['lon']],
-                        radius=10,
-                        popup=f"Fire detected!<br>Confidence: {detection['confidence']:.2f}",
-                        color='red',
-                        fill=True,
-                        fillColor='red',
-                        fillOpacity=0.7
-                    ).add_to(map_obj)
-        else:
-            map_obj = create_india_map(coordinates_data, fire_detections, tiles)
-    else:
-        india_center = [20.5937, 78.9629]
-        if map_style == "Satellite":
-            map_obj = folium.Map(location=india_center, zoom_start=5)
-            folium.TileLayer(
-                tiles=tiles,
-                attr=attr,
-                name="Satellite"
-            ).add_to(map_obj)
-        else:
-            map_obj = folium.Map(location=india_center, zoom_start=5, tiles=tiles)
-            
-        if fire_detections:
-            for detection in fire_detections:
-                folium.CircleMarker(
-                    location=[detection['lat'], detection['lon']],
-                    radius=10,
-                    popup=f"Fire detected!<br>Confidence: {detection['confidence']:.2f}",
-                    color='red',
-                    fill=True,
-                    fillColor='red',
-                    fillOpacity=0.7
-                ).add_to(map_obj)
+    # Create map data using Streamlit native map
+    import pandas as pd
     
-    # Display map
-    map_data = st_folium(map_obj, width=None, height=500)
+    all_map_data = []
+    
+    if show_risk_areas:
+        # Add fire-prone areas
+        for state, info in coordinates_data.items():
+            all_map_data.append({
+                'latitude': info['lat'],
+                'longitude': info['lon'],
+                'type': 'Risk Area',
+                'details': f"{state} - {info['fire_frequency']} Risk",
+                'size': 100
+            })
+    
+    if show_detections:
+        # Add fire detections
+        for detection in fire_detections:
+            all_map_data.append({
+                'latitude': detection['lat'],
+                'longitude': detection['lon'],
+                'type': 'Fire Detection',
+                'details': f"Fire detected - {detection['confidence']:.2f} confidence",
+                'size': 200
+            })
+    
+    if all_map_data:
+        df = pd.DataFrame(all_map_data)
+        st.map(df, latitude='latitude', longitude='longitude', size='size', color='#ff0000')
+        
+        # Show details
+        st.subheader("📍 Map Details")
+        for item in all_map_data:
+            icon = "🔥" if item['type'] == 'Fire Detection' else "⚠️"
+            st.markdown(f"{icon} {item['details']}")
+    else:
+        st.info("Select options above to display map data.")
     
     # Map legend
     st.subheader("🔍 Map Legend")
